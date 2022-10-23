@@ -8,7 +8,7 @@ find_package(OpenGL REQUIRED)
 FILE(GLOB LIB_SOURCES Libs/**/*.cpp Libs/**/*.c)
 FILE(GLOB LIB_HEADERS Libs/**/*.hpp Libs/**/*.h)
 
-add_executable(GameEngine ${LIB_SOURCES} ${LIB_HEADERS} Main.cpp)
+add_executable(GameEngine ${LIB_SOURCES} ${LIB_HEADERS} Main.cpp Engine/Rendering/RenderingContext.hpp Engine/Rendering/Backend/Renderer.cpp Engine/Rendering/Backend/Renderer.hpp Engine/Rendering/Window/Window.hpp Engine/Rendering/Window/GlfwWindow.cpp Engine/Rendering/Window/GlfwWindow.hpp)
 
 add_custom_target(copy_resources ALL
     COMMAND ${CMAKE_COMMAND} -E copy_directory
